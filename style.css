@@ -10,10 +10,8 @@ header {
     margin: 10px auto;
     padding: 20px;
     background-color: darkgrey;
-    text-shadow: 0px 1px 3px antiquewhite;
     font-size: 2.5rem;
     text-align: center;
-    box-shadow: 0px 5px 10px black;
     color: white;
 }
 
@@ -45,19 +43,23 @@ input[type=text]:focus {
 
 
 #search {
-    margin: auto;
+    margin: 20px auto;
     visibility: hidden;
     opacity: 0;
     transition: opacity .5s, visibility .5s;
 }
 
+#pre-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
 button {
     padding: 5px;
     font-size: 1rem;
     background-color: white;
     border: 1px solid grey;
-    margin: 20px;
 }
 
 button:hover {
@@ -68,19 +70,30 @@ button:active {
     box-shadow: inset 0 0 5px grey;
 }
 
+a:hover, a:focus {
+    text-decoration: underline;
+}
+a:visited {
+    color: #0b0080;
+}
+a {
+    text-decoration: none;
+    color: #0645ad;
+    background: none;
+}
 .results {
     border: 2px solid grey;
     margin-bottom: 10px;
 }
 
 .results h2 {
-    font-size: 2rem;
-    margin-left: 20px;
+    margin: 20px 0 0 30px;
+    font-size: 1.3rem;
 }
 
 .results p {
-    font-size: 1.5rem;
-    margin: 5px;
+    margin: 15px;
+    font-size: 1rem;
 }
 footer {
     position: fixed;
