@@ -2,23 +2,31 @@ var searchText;
 var dataLive;
 
 $(document).ready(function () {
+
+        // Animating text box
     $("#text-search").focus(function (e) {
         $("#search").css("visibility", "visible");
         $("#search").css("opacity", "1");
     })
+
     $("#text-search").blur(function (e) {
         $("#search").css("visibility", "hidden");
         $("#search").css("opacity", "0");
     })
+
+        // Random button
     $("#random").click(function () {
         window.open("https://en.wikipedia.org/wiki/Special:Random");
     });
+
+        // Search button
     $("#search").click(function () {
         onSearch();
     });
+
+        // Allows enter to search
     $(document).on("keypress", "#text-search", function(e) {
      if (e.which == 13) {
-         //do some stuff
          e.preventDefault();
         onSearch();
      }
@@ -34,6 +42,7 @@ function onSearch() {
 
 }
 
+    // Ajax call
 function getResults(searchTerm) {
     console.log("ajax");
     $.ajax({
@@ -48,6 +57,7 @@ function getResults(searchTerm) {
     });
 }
 
+    // Manipulates DOM
 function showResults(data) {
         var htmlString;
         $("#results").html("");
