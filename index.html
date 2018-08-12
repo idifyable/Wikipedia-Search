@@ -4,9 +4,7 @@
 <title></title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-crossorigin="anonymous"></script>
-<script src="/library/scripts/script.js"></script>
+<link href="/library/styles/normalize.css" rel="stylesheet">
 <link href="/library/styles/site.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
 </head>
@@ -14,24 +12,20 @@ crossorigin="anonymous"></script>
   <header>
     Wikipedia Search
   </header>
-  <div id="page">
-    <div id="pre-results">
-      <button type="button" id="random">
-        Random
-      </button>
-      <br>
-      <span>Or</span>
-    </div>
-    <form id="search-form">
-      <input type="text" placeholder="Search" id="text-search">
-      </input>
+  <div id="user-interface">
+    <a href="https://en.wikipedia.org/wiki/Special:Random" class="button">Random</a>
+    <p>Or</p>
+    <form name="xSEARCH">
+      <input type="text" name="xSEARCH_TERM" placeholder="Search" id="text-search">
     </form>
-    <br>
-    <button type="button" id="search">
-      Search
-    </button>
-    <div id="results">
-    </div>
   </div>
+  <ul id="results">
+  </ul>
+<script src="/library/scripts/WikipediaSearch.js"></script>
+<script>
+
+  WikipediaSearch.initialize();
+
+</script>
 </body>
 </html>
